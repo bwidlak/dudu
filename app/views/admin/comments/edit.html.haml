@@ -1,0 +1,8 @@
+%h1= _('Editing Comment')
+ 
+- form_for(:comment, :url => admin_comment_path(@comment), :html => {:method => :put}) do |f|
+  = render :partial => 'form', :locals => {:f => f}
+  %p= f.submit _('Update')
+ 
+= link_to _('Show'), admin_comment_path(@comment)
+= link_to _('Back'), admin_comments_path

@@ -1,0 +1,20 @@
+- content_tag_for :div, image do
+  %ul
+    %li
+      %strong= _('Title:')
+      =h image.title
+    %li
+      %strong= _('Body:')
+      =h image.body
+    %li
+      %strong= _('Status:')
+      =h image.status
+    %li
+      %strong= _('Img:')
+      =h image.img_id
+    %li
+      %strong= _('Url:')
+      =h image.url
+    = link_to _('Show'), image
+    = link_to _('Edit'), edit_image_path(image)
+    = link_to _('Destroy'), image, :confirm => 'Are you sure?', :method => :delete

@@ -1,0 +1,7 @@
+%h1= _('New Category')
+ 
+- form_for(:category, :url => admin_categories_path) do |f|
+  = render :partial => 'form', :locals => {:f => f}
+  %p= f.submit _("Create")
+ 
+%p= link_to _('Back'), admin_categories_path

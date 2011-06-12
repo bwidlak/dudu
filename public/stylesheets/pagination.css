@@ -1,0 +1,40 @@
+.pagination {
+  margin: 0 0 10px 0;
+  color: #3b1c0e;
+  font-family: Georgia;
+  text-align: center;
+  font-size:16px !important;
+}
+
+.pagination .prev_page,
+.pagination .next_page {
+  padding: 0px!important;
+}
+
+.pagination .current {
+  padding: 0px!important;
+}
+
+.pagination a {
+  margin:0px 3px!important;
+  font-size:inherit !important;
+  color: #3b1c0e !important;
+}
+
+.pagination span {
+  margin:0px 3px!important;
+  font-size:inherit !important;
+  color: #3B1C0E;
+}
+
+.pagination span.disabled {
+  color: #ABABAB;
+
+}
+
+.pagination .prev_page {
+
+}
+
+.pagination .prev_page {
+}

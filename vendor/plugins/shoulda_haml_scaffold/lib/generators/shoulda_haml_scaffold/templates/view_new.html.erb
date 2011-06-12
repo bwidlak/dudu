@@ -1,0 +1,7 @@
+%h1= _('New <%= singular_name.humanize %>')
+ 
+- form_for(:<%= singular_name %>, :url => <%= nested_part_name + plural_name %>_path) do |f|
+  = render :partial => 'form', :locals => {:f => f}
+  %p= f.submit _("Create")
+ 
+%p= link_to _('Back'), <%= nested_part_name + plural_name %>_path

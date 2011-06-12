@@ -1,0 +1,34 @@
+= f.error_messages
+%p
+  = f.label :category
+  %br
+  = f.select :category_id, [''] + Category.all_as_pairs
+%p
+  = f.label :body
+  %br
+  = f.text_area :body, :size => '60x5'
+%p
+  = f.label :url
+  %br
+  = f.text_field :url, :size => 70
+- unless @image.new_record?
+  %p
+    = f.label :thumbnail_url
+    %br
+    = f.text_field :thumbnail_url, :size => 70
+  %p
+    = f.label :small_url
+    %br
+    = f.text_field :small_url, :size => 70
+  %p
+    = f.label :medium_url
+    %br
+    = f.text_field :medium_url, :size => 70
+%p
+  = f.label :status
+  %br
+  = f.select :status, Image.statuses
+%p
+  = f.label :slideshow
+  %br
+  = f.select :slideshow, Image::OPTIONS

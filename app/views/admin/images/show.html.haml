@@ -1,0 +1,35 @@
+%h1= "Image \"#{@image.to_param}\""
+- content_tag_for :div, @image do
+  %ul
+    %li
+      %strong= _('Body:')
+      =h @image.body
+    %li
+      %strong= _('Status:')
+      =h @image.display_status
+    %li
+      %strong= _('Slideshow:')
+      =h @image.display_slideshow
+    %li
+      %strong= _('Thumbnail:')
+      =h @image.thumbnail_url
+      %br/
+      = image_tag @image.thumbnail_url
+    %li
+      %strong= _('Small:')
+      =h @image.small_url
+      %br/
+      = image_tag @image.small_url
+    %li
+      %strong= _('Medium:')
+      =h @image.medium_url
+      %br/
+      = image_tag @image.medium_url
+    %li
+      %strong= _('Image:')
+      =h @image.url
+      %br/
+      = image_tag @image.url
+
+= link_to _('Edit'), edit_admin_image_path(@image)
+= link_to _('Back'), admin_images_path

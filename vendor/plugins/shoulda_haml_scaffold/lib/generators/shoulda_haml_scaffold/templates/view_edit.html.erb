@@ -1,0 +1,8 @@
+%h1= _('Editing <%= singular_name.humanize %>')
+ 
+- form_for(:<%= singular_name %>, :url => <%= nested_part_name + singular_name %>_path(@<%= singular_name %>), :html => {:method => :put}) do |f|
+  = render :partial => 'form', :locals => {:f => f}
+  %p= f.submit _('Update')
+ 
+= link_to _('Show'), <%= nested_part_name + singular_name %>_path(@<%= singular_name %>)
+= link_to _('Back'), <%= nested_part_name + plural_name %>_path

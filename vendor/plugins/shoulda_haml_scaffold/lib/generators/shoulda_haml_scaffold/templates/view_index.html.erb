@@ -1,0 +1,18 @@
+%h1= _('Listing <%= plural_name.humanize %>')
+ 
+%table
+  %tr
+<% for attribute in attributes -%>
+    %th= _('<%= attribute.column.human_name %>')
+<% end -%>
+ 
+  - for <%= singular_name %> in @<%= plural_name %>
+    %tr
+<% for attribute in attributes -%>
+      %td= h <%= singular_name %>.<%= attribute.name %>
+<% end -%>
+      %td= link_to _('Show'), <%= nested_part_name + singular_name %>_path(<%= singular_name %>)
+      %td= link_to _('Edit'), edit_<%= nested_part_name + singular_name %>_path(<%= singular_name %>)
+      %td= link_to _('Destroy'), <%= nested_part_name + singular_name %>_path(<%= singular_name %>), :confirm => _('Are you sure?'), :method => :delete
+ 
+= link_to _('New <%= singular_name.humanize %>'), new_<%= nested_part_name + singular_name %>_path

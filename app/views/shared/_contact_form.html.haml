@@ -1,0 +1,11 @@
+- if request.url =~ /contacts/
+  %h5
+    Formularz kontaktowy
+    %br
+    %span
+      * - pola obowiązkowe
+- remote_form_for(:contact, :url => contacts_path) do |f|
+  = render :partial => 'contacts/form', :locals => {:f => f}
+  %p.button
+    = f.submit _("Wyślij")
+.clearfix

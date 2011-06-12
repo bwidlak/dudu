@@ -1,0 +1,29 @@
+#gallery {
+}
+
+#gallery .image_box {
+  background-color: white;
+  overflow:hidden;
+  display:block;
+  width:135px;
+  height:135px;
+  margin:0px 15px 15px 0px;
+  padding:5px;
+  float:left;
+  -webkit-box-shadow: 1px 1px 4px #BBBBBB;
+  -moz-box-shadow:1px 1px 4px #BBBBBB;
+}
+
+#gallery .image_box .img {
+  width:135px;
+  height:135px;
+  display:block;
+}
+
+#gallery .image_box .img a {
+  display:block;
+  width:135px;
+  height:135px;
+  float:left;
+  outline: medium none;
+}

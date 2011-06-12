@@ -1,0 +1,29 @@
+!!! XML
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml", 'xml:lang' => "en", :lang => "en"}
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html;charset=UTF-8'}
+    %title= 'Admin ' + controller.controller_name
+    = stylesheet_link_tag 'admin'
+    = javascript_include_tag :all
+
+  %body
+    #container
+      - if logged_in?
+        #header
+          %h1= _('Panel administratora')
+        #mainnav
+          %ul
+            =#%li= link_to _('Katygorie'), admin_categories_path
+            %li= link_to _('Galeria'), admin_images_path
+            %li= link_to _('Wpisy'), admin_comments_path
+            %li= link_to _('Strona domowa'), root_path
+            %li= link_to _('Wyloguj'), session_path(0), :method => :delete
+      #content
+        - unless flash[:notice].blank?
+          %div{:style => "color: green", :class => 'notice'}= flash[:notice]
+        - unless flash[:error].blank?
+          %div{:style => "color: red", :class => 'error'}= flash[:error]
+        = yield
+    #footer
+      = "&copy; 2010"

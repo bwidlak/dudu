@@ -1,0 +1,34 @@
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml", 'xml:lang' => "pl", :lang => "pl"}
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html;charset=UTF-8'}
+    %meta{ :name => 'Robots', :content => 'all' }
+    %meta{ :name => 'description', :content => 'Fotografia Kielce, Marcin Dudek, Fotografie z klimatem. Subtelne i estetyczne fotografie, które potrafią wzruszyć. Wyjątkowe zdjęcia ślubne dla wymagających.' }
+    %meta{ :name => 'keywords', :content => 'Fotografia ślubna: zdjęcia plenerowe ślubne, fotograf na ślub, artystyczna fotografia ślubna. Zdjęcia ślubne wykonywane z pasją.' }
+    %title= _('fotomar - fotografia ślubna i weselna')
+    = stylesheet_link_tag "/stylesheets/styles.css"
+
+    = render :partial => "layouts/javascripts"
+
+  %body{:class => request.url =~ /\/$/ ? "long_bg" : "short_bg"}
+    #header_strech
+      #header.clearfix
+        = render :partial => 'shared/header'
+    #flesh
+      - unless flash[:notice].blank?
+        %div{:style => "color: green", :class => 'notice'}= flash[:notice]
+      - unless flash[:error].blank?
+        %div{:style => "color: red", :class => 'error'}= flash[:error]
+    #contstrech{ :class => request.url =~ /\/$/ ? "" : "short"}
+      - if request.url =~ /\/$/
+        #container
+          #frame
+          = yield
+      - else
+        = yield
+    - if request.url =~ /\/$/
+      #teaser_text
+        = render :partial => 'shared/teaser_text'
+    #foostretch
+      #footer
+        = render :partial => 'shared/footer'

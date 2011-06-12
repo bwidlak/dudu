@@ -1,0 +1,11 @@
+%h1= "<%= class_name %> \"#{@<%= singular_name %>.to_param}\""
+- content_tag_for :div, @<%= singular_name %> do
+  %ul
+<% for attribute in attributes -%>
+    %li
+      %strong= _('<%= attribute.column.human_name %>:')
+      =h @<%= singular_name %>.<%= attribute.name %>
+<% end -%>
+
+= link_to _('Edit'), edit_<%= nested_part_name + singular_name %>_path(@<%= singular_name %>)
+= link_to _('Back'), <%= nested_part_name + plural_name %>_path

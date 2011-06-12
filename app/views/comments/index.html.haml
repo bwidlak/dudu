@@ -1,0 +1,9 @@
+%h1
+  Komentarze
+
+= will_paginate @comments
+  
+- @comments.each do |comment|
+  = render :partial => 'comment', :object => comment
+
+= will_paginate @comments

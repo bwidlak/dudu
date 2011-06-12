@@ -1,0 +1,149 @@
+#foostretch {
+  
+}
+
+#footer {
+  margin:0 auto;
+  width:960px;
+}
+
+#footer #comments,
+#footer #quick_contact,
+#footer #contact_form {
+  float:left;
+}
+
+#footer #comments {
+  margin:20px 20px 0 0;
+}
+
+/* COMMENTS */
+
+#footer .comment_photo {
+  width:100px;
+  height:100px;
+  padding:5px;
+  background-color: white;
+  float:left;
+  margin:0px 20px 0 0;
+}
+
+#footer .comment_photo .image {
+  width: 100px;
+  height: 100px;
+}
+
+#footer .comment_body {
+  color: #636559;
+  float:left;
+  width:254px;
+}
+
+/* QUICK CONTACT */
+
+#footer #quick_contact {
+  margin-top:6px;
+}
+
+#footer .quick_contact_box {
+  position: relative;
+  width:239px;
+  height:172px;
+  background: url("/images/quick_contact_box.png") no-repeat 0 0;
+}
+
+#footer .quick_contact_box p.number,
+#footer .quick_contact_box p.email {
+  position:absolute;
+}
+
+#footer .quick_contact_box p.number {
+  top:60px;
+  left:86px;
+}
+
+#footer .quick_contact_box p.email {
+  top:102px;
+  left:80px;
+}
+
+/* CONTACT FORM */
+
+#footer #contact_form {
+  margin: 20px 0 0 0;
+  padding:0px 20px;
+}
+
+#footer input#contact_name,
+#footer input#contact_phone,
+#footer textarea#contact_body {
+  border: 1px solid #dddddd;
+  -moz-box-shadow: 0 0 2px 2px #EFEFED;  
+}
+
+#footer input#contact_name,
+#footer input#contact_phone {
+  padding:5px;
+  width: 108px;
+  height:23px;
+}
+
+#footer textarea#contact_body {
+  padding:5px;
+  width:233px;
+  height:65px;
+  font-family:arial;
+}
+
+#footer input#contact_name,
+#footer input#contact_phone,
+#footer textarea#contact_body {
+  font-family:arial;
+  font-size:11px;
+  line-height:16px;
+}
+
+#footer form {
+  display:block;
+  width:245px;
+}
+
+#footer p.name,
+#footer p.phone {
+  float:left;
+  width:120px;
+}
+
+#footer p.name {
+  margin-right:5px;
+}
+
+#footer p.body {
+  margin-top:5px;
+  float:left;
+}
+
+#footer p.button {
+  clear:left;
+  padding-top:5px;
+}
+
+#footer h2 {
+  margin-top:30px;
+  display:block;
+  text-align:right;
+  color:#636559;
+  font: 10px/15px arial;
+  font-weight:normal;
+}
+
+#footer h2 a {
+  text-decoration:none;
+  border-bottom:1px solid #636559;
+  color: #636559;
+}
+
+#footer h2 a:hover {
+  color:#3B1C0E;
+  border-bottom:1px solid #3B1C0E;
+}

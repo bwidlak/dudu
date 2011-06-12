@@ -1,0 +1,24 @@
+defaults: &defaults
+  smtp:
+    address: "smtp.gmail.com"
+    port: 587
+    domain: "foto.marcin10@gmail.com"
+    authentication: plain
+    user_name: "foto.marcin10@gmail.com"
+    password: "marcin.123"
+  admin:
+    login: Marcin
+    password: Marcin
+  email:
+    owner: fotomar@fotomar.eu
+
+development:
+  <<: *defaults
+  email:
+    owner: j.hiszpanski@gmail.com
+
+production:
+  <<: *defaults
+
+test:
+  <<: *defaults

@@ -1,0 +1,26 @@
+#header_strech {
+  background: url(/images/header_color.png) repeat-x scroll 0 0 transparent;
+  height:116px;
+  width:100%;
+}
+
+#header {
+  margin:0 auto;
+  width:960px;
+  position:relative;
+}
+
+#logo {
+  width:298px;
+  height:91px;
+  position:absolute;
+  top:12px;
+}
+
+#logo a {
+  outline: none;
+}
+
+ul li {
+  display: inline;
+}

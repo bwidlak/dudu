@@ -1,0 +1,11 @@
+- content_tag_for :div, comment do
+  %ul
+    %li
+      %strong= _('Author:')
+      =h comment.author
+    %li
+      %strong= _('Body:')
+      =h comment.body
+    = link_to _('Show'), comment
+    = link_to _('Edit'), edit_comment_path(comment)
+    = link_to _('Destroy'), comment, :confirm => 'Are you sure?', :method => :delete

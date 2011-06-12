@@ -1,0 +1,18 @@
+//:javascript
+//  $(window).load(function() {
+//      $('#slider0').nivoSlider({
+//        effect:'random'
+//      });
+//      $('#slider1').nivoSlider({
+//        effect:'fade'
+//      });
+//      $('#slider2').nivoSlider({
+//        effect:'fade'
+//      });
+//  });
+
+- @random_images.each_with_index do |images, i|
+  .frame_for_nivo_slider
+    %div{:class => 'home_page_image', :id => "slider#{i}", :style => 'width:300px;height:220px;overflow:hidden;'}
+      - images.each do |image|
+        = image_tag image.medium_url, :size => '300x220'

@@ -1,0 +1,8 @@
+%h1= _('Editing Category')
+ 
+- form_for(:category, :url => admin_category_path(@category), :html => {:method => :put}) do |f|
+  = render :partial => 'form', :locals => {:f => f}
+  %p= f.submit _('Update')
+ 
+= link_to _('Show'), admin_category_path(@category)
+= link_to _('Back'), admin_categories_path

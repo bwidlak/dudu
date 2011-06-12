@@ -1,0 +1,18 @@
+%h1= _('Listing Categories')
+ 
+%table
+  %tr
+    %th= _('Name')
+    %th= _('Opis')
+    %th= _('Akcje')
+ 
+  - for category in @categories
+    %tr
+      %td= h category.name
+      %td= h category.body
+      %td
+        = link_to _('Show'), admin_category_path(category)
+        = link_to _('Edit'), edit_admin_category_path(category)
+        = link_to _('Destroy'), admin_category_path(category), :confirm => _('Are you sure?'), :method => :delete unless category.predefined?
+ 
+= link_to _('New Category'), new_admin_category_path

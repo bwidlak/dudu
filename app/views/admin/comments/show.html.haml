@@ -1,0 +1,12 @@
+%h1= "Comment \"#{@comment.to_param}\""
+- content_tag_for :div, @comment do
+  %ul
+    %li
+      %strong= _('Author:')
+      =h @comment.author
+    %li
+      %strong= _('Body:')
+      =h @comment.body
+
+= link_to _('Edit'), edit_admin_comment_path(@comment)
+= link_to _('Back'), admin_comments_path

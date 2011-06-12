@@ -1,0 +1,23 @@
+#logo
+  = link_to image_tag( "logo2.png", :border => '0', :alt => 'fotomar', :size => '298x91'), root_path
+
+#menu
+  %ul.nav
+    %li#contact{ :class => request.url =~ /\/contacts/ ? 'selected' : ''}
+      = link_to _('kontakt'), new_contact_path
+    =#%li#about{ :class => request.url =~ /\/about/ ? 'selected' : ''}
+    =#  = link_to _(''), about_path
+    %li#start{ :class => request.url =~ /\/$/ ? 'selected' : ''}
+      = link_to _('start'), root_path
+  .clearfix
+
+  %br
+
+  %ul.categories
+    %li#start
+      = link_to '', '#'
+    - @categories.each do |category|
+      %li{ :id => "category_#{category.name}", :class => request.url =~ /\/#{category.id}/ ? 'selected' : ''}
+        = link_to category.name, category_images_path(category)
+    %li#end
+      = link_to '', '#'

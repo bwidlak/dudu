@@ -1,0 +1,14 @@
+#headstrech
+  %h1
+    = image_tag header_for_gallery(@category.name), :alt => @category.name, :height => '54'
+#teaser_text
+  #container
+    #gallery
+      = will_paginate @images
+      - @images.each do |image|
+        =#%a{:href => image.url, :rel => "lightbox[#{@category.name}]"}
+        =#%div{:style => "background: url('#{image.thumbnail_url}') no-repeat 50% 50%; width:100px;height:100px;"}
+        %div.image_box
+          .img{ :style => "background: white url('#{image.small_url}') no-repeat 50% 50%"}
+            = link_to '', image.url, :rel => "lightbox[#{@category.name}]"
+      .clearfix

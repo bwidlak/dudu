@@ -1,0 +1,111 @@
+#container input#contact_name,
+#container input#contact_phone,
+#container textarea#contact_body {
+  font: 12px/18px Arial,Helvetica,Geneva,sans-serif;
+}
+
+#container input#contact_name,
+#container input#contact_phone,
+#container textarea {
+  border: 0 none;
+  background: url("/images/contact_input.png") no-repeat 0 0;
+}
+
+#container textarea {
+  background: url("/images/contact_textarea.png") no-repeat 0 0;
+}
+
+#container label {
+  color: #3B1C0E;
+  padding: 0 15px;
+}
+
+#container span {
+  color: #ABABAB;
+  padding: 0 15px;
+  font-style:italic;
+  font-size: 13px;
+}
+
+#container h5 span {
+  padding:0px;
+  text-transform: lowercase;
+}
+
+#container #contact_teaser,
+#container #contact_form {
+  padding: 15px;
+  background-color: white;
+  float: left;
+  width: 595px;
+  -webkit-box-shadow: 1px 1px 4px #BBBBBB;
+  -moz-box-shadow:1px 1px 4px #BBBBBB;
+}
+
+#container #contact_teaser {
+  width: 290px;
+  margin-right:15px;
+}
+
+#container p.name,
+#container p.phone {
+  width:290px;
+  float:left;
+}
+
+#container p.phone {
+  margin-left:15px;
+}
+
+#container p.name label,
+#container p.phone label,
+#container p.name span,
+#container p.phone span {
+  width: 235px;
+  display: block;
+}
+
+#container p.body label,
+#container p.body span {
+  width: 565px;
+  display: block;
+}
+
+#container input#contact_name,
+#container input#contact_phone {
+  width:260px;
+  padding:15px;
+}
+
+#container textarea#contact_body {
+  width:565px;
+  height:124px;
+  padding:15px;
+}
+
+#container p.button {
+  display: block;
+  width: 565px;
+  padding: 15px 15px 0 15px;
+}
+
+#container p.body {
+  clear:left;
+}
+
+#container form {
+}
+
+#container div.fieldWithErrors input#contact_name,
+#container div.fieldWithErrors input#contact_phone {
+  background: url("/images/contact_input_error.png") no-repeat 0 0;
+}
+
+#container div.fieldWithErrors textarea#contact_body {
+  background: url("/images/contact_textarea_error.png") no-repeat 0 0;
+}
+
+#container div.formError {
+  padding: 0px 15px;
+  color: #d67c7c;
+}
