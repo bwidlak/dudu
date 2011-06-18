@@ -2,34 +2,33 @@
   .frame_for_nivo_slider
     %div{:class => 'home_page_image', :id => "slider#{i}"}
       - images.each do |image|
-        = image_tag image.normal_url, :alt => '', :size => '300x220'
+        = image_tag image.medium_url, :alt => '', :size => '300x220'
 
 
-//    :javascript
-//      $(window).load(function() {
-//          $('#slider0').nivoSlider({
-//            directionNav:false,
-//            directionNavHide:true,
-//            effect:'fade',
-//            controlNav:false,
-//            keyboardNav:false,
-//            pauseOnHover:false
-//          });
-//          $('#slider1').nivoSlider({
-//            directionNav:false,
-//            directionNavHide:true,
-//            effect:'fade',
-//            controlNav:false,
-//            keyboardNav:false,
-//            pauseOnHover:false
-//          });
-//          $('#slider2').nivoSlider({
-//            directionNav:false,
-//            directionNavHide:true,
-//            effect:'fade',
-//            controlNav:false,
-//            keyboardNav:false,
-//            pauseOnHover:false
-//          });
-//      });
-//
+:javascript
+  $(window).load(function() {
+      $('#slider0').nivoSlider({
+        directionNav:false,
+        directionNavHide:true,
+        effect:'fade',
+        controlNav:false,
+        keyboardNav:false,
+        pauseOnHover:false
+      });
+      $('#slider1').nivoSlider({
+        directionNav:false,
+        directionNavHide:true,
+        effect:'fade',
+        controlNav:false,
+        keyboardNav:false,
+        pauseOnHover:false
+      });
+      $('#slider2').nivoSlider({
+        directionNav:false,
+        directionNavHide:true,
+        effect:'fade',
+        controlNav:false,
+        keyboardNav:false,
+        pauseOnHover:false
+      });
+  });
