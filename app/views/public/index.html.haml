@@ -1,8 +1,8 @@
 - @random_images.each_with_index do |images, i|
   .frame_for_nivo_slider
     %div{:class => 'home_page_image', :id => "slider#{i}"}
-      -# images.each do |image|
-        =# image_tag image.normal_url, :alt => '', :size => '300x220'
+      - images.each do |image|
+        = image_tag image.normal_url, :alt => '', :size => '300x220'
 
 
 //    :javascript
