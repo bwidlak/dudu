@@ -5,8 +5,8 @@ class ImagesController < ApplicationController
   per_page 42
   
   def index
-    @images = @category.images.active.scoped(:order => 'random()').paginate(paginate_options)
-    #@images = @category.images.active.paginate(paginate_options)
+    #@images = @category.images.active.scoped(:order => 'random()').paginate(paginate_options)
+    @images = @category.images.active.paginate(paginate_options)
     @slideshow_images = @category.images.active.slideshow.all(:limit => 3)
   end
   

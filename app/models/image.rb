@@ -17,7 +17,7 @@ class Image < ActiveRecord::Base
   
   before_save :set_other_urls
 
-  named_scope :random, :order => 'random()', :limit => 1
+  #named_scope :random, :order => 'random()', :limit => 1
   named_scope :slideshow, :conditions => {:slideshow => YES}
   named_scope :no_slideshow, :conditions => {:slideshow => NO}
   named_scope :category_filter, lambda {|options|
