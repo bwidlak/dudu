@@ -20,12 +20,7 @@
       - unless flash[:error].blank?
         %div{:style => "color: red", :class => 'error'}= flash[:error]
     #contstrech{ :class => request.url =~ /\/$/ ? "" : "short"}
-      - if request.url =~ /\/$/
-        #container
-          #frame
-          = yield
-      - else
-        = yield
+      = yield
     - if request.url =~ /\/$/
       #teaser_text
         = render :partial => 'shared/teaser_text'

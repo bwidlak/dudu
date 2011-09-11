@@ -5,8 +5,8 @@
 @import url("menu.css");
 @import url("gallery.css");
 @import url("contact.css");
-@import url("nivo_slider.css");
 @import url("pagination.css");
+@import url("slides.css");
 
 * {
   margin: 0;

@@ -24,39 +24,6 @@
   position:relative;
 }
 
-#frame {
-  position:absolute;
-  background: url("/images/frames_photos.png") no-repeat 0 0;
-  z-index:99999;
-  width:986px;
-  height:280px;
-  left:-9px;
-  top:-15px;
-}
-
-.frame_for_nivo_slider {
-  background: transparent url('/images/loader.gif') no-repeat 50% 50%;
-  padding:10px;
-  float:left;
-  overflow: hidden!important;
-  width: 300px;
-  height: 220px;
-}
-
-.frame_for_nivo_slider #slider0,
-.frame_for_nivo_slider #slider1,
-.frame_for_nivo_slider #slider2 {
-  position: relative;
-}
-
-.frame_for_nivo_slider #slider0 img {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  display: none;
-}
-
-
 #teasers {
     background: url("/images/teaserbg.jpg") repeat-x bottom;
 }

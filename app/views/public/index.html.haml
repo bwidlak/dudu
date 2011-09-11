@@ -1,34 +1,48 @@
-- @random_images.each_with_index do |images, i|
-  .frame_for_nivo_slider
-    %div{:class => 'home_page_image', :id => "slider#{i}"}
-      - images.each do |image|
-        = image_tag image.medium_url, :alt => '', :size => '300x220'
-
+#container
+  #frame
+  - @random_images.each_with_index do |images, i|
+    %div{:class => 'aaaa', :id => "slides_#{i}"}
+      .slides_container
+        - images.each do |image|
+          = image_tag image.medium_url, :alt => '', :size => '300x220'
 
 :javascript
-  $(window).load(function() {
-      $('#slider0').nivoSlider({
-        directionNav:false,
-        directionNavHide:true,
-        effect:'fade',
-        controlNav:false,
-        keyboardNav:false,
-        pauseOnHover:false
-      });
-      $('#slider1').nivoSlider({
-        directionNav:false,
-        directionNavHide:true,
-        effect:'fade',
-        controlNav:false,
-        keyboardNav:false,
-        pauseOnHover:false
-      });
-      $('#slider2').nivoSlider({
-        directionNav:false,
-        directionNavHide:true,
-        effect:'fade',
-        controlNav:false,
-        keyboardNav:false,
-        pauseOnHover:false
-      });
+  $(function(){
+    $('#slides_0').slides({
+      generatePagination: false,
+      preload: true,
+      effect: 'fade, fade',
+      play: 5000,
+      randomize: true,
+      pause: 2500,
+      generateNextPrev: false,
+      crossfade: true,
+      preloadImage: 'images/loading.gif'
+    });
+  });
+  $(function(){
+    $('#slides_1').slides({
+      generatePagination: false,
+      preload: true,
+      effect: 'fade, fade',
+      play: 5000,
+      randomize: true,
+      pause: 2500,
+      generateNextPrev: false,
+      crossfade: true,
+      preloadImage: 'images/loading.gif'
+    });
+  });
+  $(function(){
+    $('#slides_2').slides({
+      generatePagination: false,
+      preload: true,
+      effect: 'fade, fade',
+      play: 5000,
+      randomize: true,
+      pause: 2500,
+      generateNextPrev: false,
+      crossfade: true,
+      preloadImage: 'images/loading.gif'
+    });
   });

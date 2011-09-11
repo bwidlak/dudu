@@ -1,0 +1,29 @@
+#frame {
+  position:absolute;
+  background: url("/images/frames_photos.png") no-repeat 0 0;
+  z-index:99999;
+  width:986px;
+  height:280px;
+  left:-9px;
+  top:-15px;
+}
+
+#slides_0, #slides_1, #slides_2 {
+  background-color: white;
+  padding: 10px;
+  z-index:100;
+  float: left;
+}
+
+.slides_container {
+	width:300px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+
+.slides_container img {
+	width:300px;
+	height:220px;
+	display:block;
+}
