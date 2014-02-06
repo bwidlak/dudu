@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :images, :collection => {:multi_change => :get}
   end
 
-  map.resources :sessions
+  # map.resources :sessions
   map.resources :contacts
   map.resources :comments
   map.resources :categories, :has_many => :images
