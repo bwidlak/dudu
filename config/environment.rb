@@ -1,6 +1,3 @@
-# Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
-
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
@@ -15,14 +12,6 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   # config.gem 'flickr-fu', :version => '0.1.4', :lib => 'flickr_fu'
   # config.gem 'commonthread-flickr_fu', :lib => 'flickr_fu', :version => '0.3.0', :source => 'http://gems.github.com'
-
-  config.gem 'ambethia-smtp-tls', :version => ">=1.1.2", :lib => "smtp-tls", :source => "http://gems.github.com"
-  config.gem 'mislav-will_paginate', :version => '>=2.3.8', :lib => 'will_paginate'
-  config.gem 'settingslogic', :version => ">=2.0.6"
-  config.gem 'shoulda'
-  config.gem 'jnunemaker-validatable', :version => '>=1.8.4', :lib => "validatable"
-  config.gem 'searchlogic', :version => '2.4.25'
-  
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
