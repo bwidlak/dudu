@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+gem 'rails', '2.3.8'
+
+gem 'ambethia-smtp-tls', '>=1.1.2'
+gem 'mislav-will_paginate', '>= 2.3.8'
+gem 'jnunemaker-validatable', '>=1.8.4'
+gem 'settingslogic', '>= 2.0.6'
+gem 'shoulda'
+gem 'haml', '>= 2.2.24'
+gem 'searchlogic', '2.4.25'

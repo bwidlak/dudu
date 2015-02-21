@@ -1,0 +1,50 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    actionmailer (2.3.8)
+      actionpack (= 2.3.8)
+    actionpack (2.3.8)
+      activesupport (= 2.3.8)
+      rack (~> 1.1.0)
+    activerecord (2.3.8)
+      activesupport (= 2.3.8)
+    activeresource (2.3.8)
+      activesupport (= 2.3.8)
+    activesupport (2.3.8)
+    ambethia-smtp-tls (1.1.2)
+    haml (4.0.6)
+      tilt
+    jnunemaker-validatable (1.8.4)
+      activesupport (>= 2.3.4)
+    mislav-will_paginate (2.3.11)
+    rack (1.1.6)
+    rails (2.3.8)
+      actionmailer (= 2.3.8)
+      actionpack (= 2.3.8)
+      activerecord (= 2.3.8)
+      activeresource (= 2.3.8)
+      activesupport (= 2.3.8)
+      rake (>= 0.8.3)
+    rake (10.4.2)
+    searchlogic (2.4.25)
+      activerecord (>= 2.0.0)
+    settingslogic (2.0.9)
+    shoulda (3.0.1)
+      shoulda-context (~> 1.0.0)
+      shoulda-matchers (~> 1.0.0)
+    shoulda-context (1.0.2)
+    shoulda-matchers (1.0.0)
+    tilt (2.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ambethia-smtp-tls (>= 1.1.2)
+  haml (>= 2.2.24)
+  jnunemaker-validatable (>= 1.8.4)
+  mislav-will_paginate (>= 2.3.8)
+  rails (= 2.3.8)
+  searchlogic (= 2.4.25)
+  settingslogic (>= 2.0.6)
+  shoulda

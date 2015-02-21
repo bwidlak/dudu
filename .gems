@@ -1,8 +1,0 @@
-ambethia-smtp-tls --version '>=1.1.2' --source http://gems.github.com
-mislav-will_paginate --version '>= 2.3.8' --source http://gems.github.com
-jnunemaker-validatable --version '>=1.8.4'
-settingslogic --version '>= 2.0.6'
-shoulda
-haml --version '>= 2.2.24'
-rails --version '2.3.8'
-searchlogic --version '2.4.25'
