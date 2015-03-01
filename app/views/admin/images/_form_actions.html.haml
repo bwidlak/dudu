@@ -1,7 +1,7 @@
-= _('Zmień: ')
-= _('Status')
+= 'Zmień: '
+= 'Status'
 = select_tag 'actions[status]', options_for_select(Image.statuses, :selected => 1)
 ,
-= _('Slideshow')
+= 'Slideshow'
 = select_tag 'actions[slideshow]', options_for_select(Image::OPTIONS, :selected => 2)
 = submit_tag 'Zastosuj'

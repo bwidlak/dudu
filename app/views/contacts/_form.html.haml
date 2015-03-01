@@ -1,27 +1,24 @@
 %p.name
-  = f.label :name, _('imię *') unless !contact_section?
+  = f.label :name, 'imię *' unless !contact_section?
   - if request.url =~ /contacts/
     %span
-      = _('podaj swoje imię')
+      = 'podaj swoje imię'
     = f.text_field :name
   - else
-    = f.text_field :name, :value => "imię", :onfocus => "if (this.value=='imię') { this.value=''; }", :onblur => "if (this.value=='') { this.value='imię'; }"
-  = error_message_on :contact, :name
+    = f.text_field :name, placeholder: "imię"
 %p.phone
-  = f.label :phone, _('email / telefon *') unless !contact_section?
+  = f.label :phone, 'email / telefon *' unless !contact_section?
   - if request.url =~ /contacts/
     %span
-      = _('podaj email lub telefon')
+      = 'podaj email lub telefon'
     = f.text_field :phone
   - else
-    = f.text_field :phone, :value => "email / telefon", :onfocus => "if (this.value=='email / telefon') { this.value=''; }", :onblur => "if (this.value=='') { this.value='email / telefon'; }"
-  = error_message_on :contact, :phone
+    = f.text_field :phone, placeholder: "email / telefon"
 %p.body
-  = f.label :body, _('treść *') unless !contact_section?
+  = f.label :body, 'treść *' unless !contact_section?
   - if request.url =~ /contacts/
     %span
-      = _('zadaj mi pytanie a ja skontaktuję się z Tobą za pośrednictwem email lub telefonu')
+      = 'zadaj mi pytanie a ja skontaktuję się z Tobą za pośrednictwem email lub telefonu'
     = f.text_area :body, :size => '25x4'
   - else
-    = f.text_area :body, :size => '25x4', :value => "treść", :onfocus => "if (this.value=='treść') { this.value=''; }", :onblur => "if (this.value=='') { this.value='treść'; }"
-  = error_message_on :contact, :body
+    = f.text_area :body, :size => '25x4', placeholder: "treść"

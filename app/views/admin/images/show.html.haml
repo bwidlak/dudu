@@ -2,34 +2,34 @@
 - content_tag_for :div, @image do
   %ul
     %li
-      %strong= _('Body:')
+      %strong= 'Body:'
       =h @image.body
     %li
-      %strong= _('Status:')
+      %strong= 'Status:'
       =h @image.display_status
     %li
-      %strong= _('Slideshow:')
+      %strong= 'Slideshow:'
       =h @image.display_slideshow
     %li
-      %strong= _('Thumbnail:')
+      %strong= 'Thumbnail:'
       =h @image.thumbnail_url
       %br/
       = image_tag @image.thumbnail_url
     %li
-      %strong= _('Small:')
+      %strong= 'Small:'
       =h @image.small_url
       %br/
       = image_tag @image.small_url
     %li
-      %strong= _('Medium:')
+      %strong= 'Medium:'
       =h @image.medium_url
       %br/
       = image_tag @image.medium_url
     %li
-      %strong= _('Image:')
+      %strong= 'Image:'
       =h @image.url
       %br/
       = image_tag @image.url
 
-= link_to _('Edit'), edit_admin_image_path(@image)
-= link_to _('Back'), admin_images_path
+= link_to 'Edit', edit_admin_image_path(@image)
+= link_to 'Back', admin_images_path

@@ -1,4 +1,4 @@
 class Comment < ActiveRecord::Base
   validates_presence_of :body, :author
-  named_scope :random, :order => 'random()', :limit => 1
+  scope :random, -> { limit(1).order("RANDOM()") }
 end

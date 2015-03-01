@@ -5,10 +5,9 @@
     %meta{ :name => 'Robots', :content => 'all' }
     %meta{ :name => 'description', :content => 'Fotografia Kielce, Marcin Dudek, Fotografie z klimatem. Subtelne i estetyczne fotografie, które potrafią wzruszyć. Wyjątkowe zdjęcia ślubne dla wymagających.' }
     %meta{ :name => 'keywords', :content => 'Fotografia ślubna: zdjęcia plenerowe ślubne, fotograf na ślub, artystyczna fotografia ślubna. Zdjęcia ślubne wykonywane z pasją.' }
-    %title= _('fotomar - fotografia ślubna i weselna')
-    = stylesheet_link_tag "/stylesheets/styles.css"
-
-    = render :partial => "layouts/javascripts"
+    %title= 'fotomar - fotografia ślubna i weselna'
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application", params[:controller]
 
   %body{:class => request.url =~ /\/$/ ? "long_bg" : "short_bg"}
     #header_strech
@@ -27,14 +26,3 @@
     #foostretch
       #footer
         = render :partial => 'shared/footer'
-
-:javascript
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-24054018-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();

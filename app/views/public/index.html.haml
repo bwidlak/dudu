@@ -1,48 +1,40 @@
 #container
   #frame
   - @random_images.each_with_index do |images, i|
-    %div{:class => 'aaaa', :id => "slides_#{i}"}
-      .slides_container
-        - images.each do |image|
+    %ul{ id: "slides_#{i}" }
+      - images.each do |image|
+        %li
           = image_tag image.medium_url, :alt => '', :size => '300x220'
+        
 
 :javascript
-  $(function(){
-    $('#slides_0').slides({
-      generatePagination: false,
-      preload: true,
-      effect: 'fade, fade',
-      play: 5000,
-      randomize: true,
-      pause: 2500,
-      generateNextPrev: false,
-      crossfade: true,
-      preloadImage: 'images/loading.gif'
-    });
-  });
-  $(function(){
-    $('#slides_1').slides({
-      generatePagination: false,
-      preload: true,
-      effect: 'fade, fade',
-      play: 5000,
-      randomize: true,
-      pause: 2500,
-      generateNextPrev: false,
-      crossfade: true,
-      preloadImage: 'images/loading.gif'
-    });
-  });
-  $(function(){
-    $('#slides_2').slides({
-      generatePagination: false,
-      preload: true,
-      effect: 'fade, fade',
-      play: 5000,
-      randomize: true,
-      pause: 2500,
-      generateNextPrev: false,
-      crossfade: true,
-      preloadImage: 'images/loading.gif'
-    });
+  
+  $(document).ready(function() {
+
+    var slider_0 = $('#slides_0');
+    var slider_1 = $('#slides_1');
+    var slider_2 = $('#slides_2');
+
+    function startSlider(object) {
+      object.lightSlider({
+        autoWidth:true,
+        loop:true,
+        mode:'fade',
+        pager: false,
+        auto: true
+      });
+    }
+
+    if (slider_0.children().length > 1) {
+      startSlider(slider_0);
+    }
+
+    if (slider_1.children().length > 1) {
+      startSlider(slider_1);
+    }
+
+    if (slider_2.children().length > 1) {
+      startSlider(slider_2);
+    }
+
   });

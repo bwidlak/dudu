@@ -1,24 +1,9 @@
-# Filters added to this controller apply to all controllers in the application.
-# Likewise, all the methods added will be available for all controllers.
-
 class ApplicationController < ActionController::Base
-  include PerPageSupport
-  include GetText
 
-  helper :all
-  protect_from_forgery
-
-  filter_parameter_logging :password
-  helper_method :logged_in?
+  protect_from_forgery with: :exception
   
   before_filter :load_footer_data
-  
-  protected
-    
-  def logged_in?
-    session[:logged_in]
-  end
-  
+      
   private
   
   def load_footer_data
@@ -26,4 +11,11 @@ class ApplicationController < ActionController::Base
     @comment = Comment.random.first || Comment.new
     @contact = Contact.new
   end
+
+  def current_user
+    User.find(session[:user_id])
+  end
+
+  helper_method :current_user
+
 end

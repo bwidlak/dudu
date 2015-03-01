@@ -5,8 +5,8 @@ module CommonStatuses
     def included klass
       klass.class_eval do
         extend ClassMethods
-        named_scope :active, :conditions => {:status => ACTIVE}
-        named_scope :not_active, :conditions => {:status => NOT_ACTIVE}
+        scope :active, -> { where("status = ?", ACTIVE) }
+        scope :not_active, -> { where("status =? ", NOT_ACTIVE) }
       end
     end
   end

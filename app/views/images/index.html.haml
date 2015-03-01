@@ -6,9 +6,13 @@
     #gallery
       = will_paginate @images
       - @images.each do |image|
-        =#%a{:href => image.url, :rel => "lightbox[#{@category.name}]"}
-        =#%div{:style => "background: url('#{image.thumbnail_url}') no-repeat 50% 50%; width:100px;height:100px;"}
         %div.image_box
           .img{ :style => "background: white url('#{image.small_url}') no-repeat 50% 50%"}
-            = link_to '', image.url, :rel => "lightbox[#{@category.name}]"
+            = link_to '', image.url, class: "fancybox", rel: "group"
       .clearfix
+
+:javascript
+
+  $(document).ready(function() {
+    $(".fancybox").fancybox();
+  });

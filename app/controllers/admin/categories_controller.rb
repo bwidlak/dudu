@@ -2,7 +2,7 @@ class Admin::CategoriesController < Admin::BaseController
   before_filter :load_category, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @categories = Category.find(:all)
+    @categories = Category.all
   end
 
   def show

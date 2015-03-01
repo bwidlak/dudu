@@ -1,5 +1,5 @@
 #comments
-  = render :partial => 'comments/comment', :object => @comment
+  = render partial: 'comments/comment', object: @comment
 #quick_contact
   = render :partial => 'shared/quick_contact'
 - unless contact_section?
@@ -8,6 +8,3 @@
       = image_tag ("header_quick_form.png") 
     = render :partial => 'shared/contact_form'
   .clearfix
-%h2.project_realization
-  design & realization
-  = link_to 'bwidlak', "http://bwidlak.com/"

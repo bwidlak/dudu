@@ -1,29 +1,22 @@
-%h1= _('Listing Images')
+%h1= 'Listing Images'
 
-- form_for @search do |f|
-  %p
-    = _('Katygoria')
-    = f.select :category_id_equals, Category.all_as_pairs, {:include_blank => true}, {:onchange => 'submit()'}
-    = _('Slideshow')
-    = f.select :slideshow_equals, Image::OPTIONS, {:include_blank => true}, {:onchange => 'submit()'}
-
-= link_to _('New Image'), new_admin_image_path
+= link_to 'New Image', new_admin_image_path
 
 = will_paginate @images
 
-- form_tag multi_change_admin_images_path, :method => :get do
+= form_tag multi_change_admin_images_path, :method => :get do
 
   = render :partial => 'form_actions'
  
   %table
     %tr
-      %th= _('Zaznacz')
-      %th= order @search, :by => :category_name, :as => _('Category')
-      %th= order @search, :by => :status, :as => _('Status')
-      %th= order @search, :by => :slideshow, :as => _('Slideshow')
-      %th= order @search, :by => :url, :as => _('Url')
-      %th= _('Thumbnail')
-      %th= _('Akcje')
+      %th= 'Zaznacz'
+      %th=# order @search, :by => :category_name, :as => 'Category'
+      %th=# order @search, :by => :status, :as => 'Status'
+      %th=# order @search, :by => :slideshow, :as => 'Slideshow'
+      %th=# order @search, :by => :url, :as => 'Url'
+      %th= 'Thumbnail'
+      %th= 'Akcje'
  
     - for image in @images
       %tr
@@ -34,12 +27,12 @@
         %td= h image.url
         %td= image_tag image.thumbnail_url.to_s, :size => '100x75'
         %td
-          = link_to _('Show'), admin_image_path(image)
-          = link_to _('Edit'), edit_admin_image_path(image)
-          = link_to _('Destroy'), admin_image_path(image), :confirm => _('Czy napewno?'), :method => :delete
+          = link_to 'Show', admin_image_path(image)
+          = link_to 'Edit', edit_admin_image_path(image)
+          = link_to 'Destroy', admin_image_path(image), :confirm => 'Czy napewno?', :method => :delete
 
   = render :partial => 'form_actions'
 
 = will_paginate @images
  
-= link_to _('New Image'), new_admin_image_path
+= link_to 'New Image', new_admin_image_path

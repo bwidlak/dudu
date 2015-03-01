@@ -2,11 +2,11 @@
 - content_tag_for :div, @comment do
   %ul
     %li
-      %strong= _('Author:')
+      %strong= 'Author:'
       =h @comment.author
     %li
-      %strong= _('Body:')
+      %strong= 'Body:'
       =h @comment.body
 
-= link_to _('Edit'), edit_admin_comment_path(@comment)
-= link_to _('Back'), admin_comments_path
+= link_to 'Edit', edit_admin_comment_path(@comment)
+= link_to 'Back', admin_comments_path

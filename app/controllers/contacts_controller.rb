@@ -4,14 +4,23 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new params[:contact]
-    render :update do |page|
-      if @contact.valid?
-        UserMailer.deliver_marcin_contact @contact
-        page.replace_html 'contact_form', _('Wiadomość została wysłana!')
-      else
-        page.replace_html 'contact_form', :partial => 'shared/contact_form'
-      end
+    @contact = Contact.new contact_params
+    if @contact.valid?
+      # UserMailer.marcin_contact(@contact).deliver_now
+      flash[:notice] = "OK"
+      redirect_to new_contact_path
+    else
+      render action: :edit
     end
   end
+
+  def edit
+  end
+
+  private
+
+  def contact_params
+    params.require(:contact).permit(:name, :phone, :body)
+  end
+
 end

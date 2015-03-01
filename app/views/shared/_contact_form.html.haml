@@ -4,8 +4,9 @@
     %br
     %span
       * - pola obowiązkowe
-- remote_form_for(:contact, :url => contacts_path) do |f|
+=# form_for(:contact, url: contacts_path, remote: true ) do |f|
+= form_for @contact do |f|
   = render :partial => 'contacts/form', :locals => {:f => f}
   %p.button
-    = f.submit _("Wyślij")
+    = f.submit "Wyślij"
 .clearfix

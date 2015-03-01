@@ -1,4 +1,7 @@
+# encoding: utf-8
+
 class Image < ActiveRecord::Base
+
   include CommonStatuses
   include GetText
 
@@ -6,8 +9,8 @@ class Image < ActiveRecord::Base
   NO = 2
   
   OPTIONS = {
-    _('Tak') => YES,
-    _('Nie') => NO,
+    'Tak' => YES,
+    'Nie' => NO,
   }
   
   belongs_to :category
@@ -17,10 +20,9 @@ class Image < ActiveRecord::Base
   
   before_save :set_other_urls
 
-  #named_scope :random, :order => 'random()', :limit => 1
-  named_scope :slideshow, :conditions => {:slideshow => YES}
-  named_scope :no_slideshow, :conditions => {:slideshow => NO}
-  named_scope :category_filter, lambda {|options|
+  scope :slideshow, -> { where("slideshow = ?", YES) }
+  scope :no_slideshow, -> { where("slideshow =? ", NO) }
+  scope :category_filter, lambda {|options|
     !options.blank? && !options[:category_id].blank? ? {:conditions => options} : {}
   }
 
@@ -33,7 +35,8 @@ class Image < ActiveRecord::Base
     
     def random_images
       Category.main_categories.map do |category|
-        category_id_equals(category).active.slideshow
+        category.images.active.slideshow
+        # category_id_equals(category).active.slideshow
       end.compact
     end
   end

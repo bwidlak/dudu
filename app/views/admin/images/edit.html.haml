@@ -1,8 +1,8 @@
-%h1= _('Editing Image')
+%h1= 'Editing Image'
  
-- form_for(:image, :url => admin_image_path(@image), :html => {:method => :put}) do |f|
+= form_for(:image, :url => admin_image_path(@image), :html => {:method => :put}) do |f|
   = render :partial => 'form', :locals => {:f => f}
-  %p= f.submit _('Update')
+  %p= f.submit 'Update'
  
-= link_to _('Show'), admin_image_path(@image)
-= link_to _('Back'), admin_images_path
+= link_to 'Show', admin_image_path(@image)
+= link_to 'Back', admin_images_path

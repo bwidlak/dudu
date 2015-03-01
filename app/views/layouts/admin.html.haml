@@ -9,21 +9,17 @@
 
   %body
     #container
-      - if logged_in?
+      - if current_user
         #header
-          %h1= _('Panel administratora')
+          %h1= 'Panel administratora'
         #mainnav
           %ul
-            =#%li= link_to _('Katygorie'), admin_categories_path
-            %li= link_to _('Galeria'), admin_images_path
-            %li= link_to _('Wpisy'), admin_comments_path
-            %li= link_to _('Strona domowa'), root_path
-            %li= link_to _('Wyloguj'), session_path(0), :method => :delete
+            %li= link_to 'Galeria', admin_images_path
+            %li= link_to 'Wpisy', admin_comments_path
+            %li= link_to 'Strona domowa', root_path
       #content
         - unless flash[:notice].blank?
           %div{:style => "color: green", :class => 'notice'}= flash[:notice]
         - unless flash[:error].blank?
           %div{:style => "color: red", :class => 'error'}= flash[:error]
         = yield
-    #footer
-      = "&copy; 2010"

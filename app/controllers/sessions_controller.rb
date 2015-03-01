@@ -1,23 +1,23 @@
 class SessionsController < ApplicationController
   layout 'admin'
-  
+
   def new
   end
-  
+
   def create
-    if params[:login] == Settings.admin.login && params[:password] == Settings.admin.password
-      session[:logged_in] = true
-      flash[:notice] = _('Logowanie powiodło sie')
-      redirect_to admin_path
+    user = User.find_by_login(params[:login])
+    if user && user.authenticate(params[:password], user)
+      session[:user_id] = user.id
+      puts "ZALOGOWANY"
+      redirect_to root_url, notice: 'Logged in!'
     else
-      flash[:error] = _('Zły login lub hasło')
-      redirect_to new_session_path
+      render :new
     end
   end
-  
+
   def destroy
-    session[:logged_in] = nil
-    flash[:notice] = _('Zostałeś wylogowany')
-    redirect_to root_path
-  end
+    session[:user_id] = nil
+    redirect_to root_url, notice: 'Logged out!'
+  end  
+
 end

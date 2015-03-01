@@ -7,8 +7,7 @@ class Admin::ImagesController < Admin::BaseController
   end
 
   def index
-    @search = Image.search params[:search]
-    @images = @search.paginate(paginate_options)
+    @images = Image.paginate(:page => params[:page])
   end
 
   def show
@@ -22,10 +21,10 @@ class Admin::ImagesController < Admin::BaseController
   end
 
   def create
-    @image = Image.new(params[:image])
+    @image = Image.new(image_params)
 
     if @image.save
-      flash[:notice] = _('Image was successfully created.')
+      flash[:notice] = 'Image was successfully created.'
       redirect_to(admin_image_url(@image))
     else
       render :action => "new"
@@ -33,8 +32,8 @@ class Admin::ImagesController < Admin::BaseController
   end
 
   def update
-    if @image.update_attributes(params[:image])
-      flash[:notice] = _('Image was successfully updated.')
+    if @image.update_attributes(image_params)
+      flash[:notice] = 'Image was successfully updated.'
       redirect_to(admin_image_url(@image))
     else
       render :action => "edit"
@@ -46,9 +45,13 @@ class Admin::ImagesController < Admin::BaseController
     redirect_to(admin_images_url)
   end
 
-private
+  private
 
   def load_image
     @image = Image.find(params[:id])
+  end
+
+  def image_params
+    params.require(:image).permit(:body, :status, :img_id, :url, :category_id, :thumbnail_url, :slideshow, :small_url, :medium_url)
   end
 end

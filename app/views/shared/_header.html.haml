@@ -4,11 +4,11 @@
 #menu
   %ul.nav
     %li#contact{ :class => request.url =~ /\/contacts/ ? 'selected' : ''}
-      = link_to _('kontakt'), new_contact_path
+      = link_to 'kontakt', new_contact_path
     =#%li#about{ :class => request.url =~ /\/about/ ? 'selected' : ''}
     =#  = link_to _(''), about_path
     %li#start{ :class => request.url =~ /\/$/ ? 'selected' : ''}
-      = link_to _('start'), root_path
+      = link_to 'start', root_path
   .clearfix
 
   %br
