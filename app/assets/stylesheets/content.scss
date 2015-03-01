@@ -5,7 +5,9 @@
 
 #contstrech {
   padding: 30px 0 0 0;
-  background: url("/images/sunspot.png") no-repeat 50% -1px;
+  background-repeat: no-repeat;
+  background-position: 50% -1px;
+  background-image: url(image-path("sunspot.png"));
   width:100%;
 }
 
@@ -25,7 +27,9 @@
 }
 
 #teasers {
-    background: url("/images/teaserbg.jpg") repeat-x bottom;
+  background-image: url(image-path("teaserbg.jpg"));
+  background-position: bottom;
+  background-repeat: repeat-x;
 }
 
 #teasers .section {
@@ -39,7 +43,7 @@
 }
 
 #teaser_text {
-  background: #f3f2f0 url("/images/home_page_text_bg.gif") repeat-x bottom;
+  background: #f3f2f0 url(image-path("home_page_text_bg.gif")) repeat-x bottom;
 }
 
 #teaser_text .text {
@@ -60,5 +64,5 @@
 }
 
 #teaser_text .text .element.separator {
-  background: url("/images/home_page_text_separator.jpg") no-repeat right center transparent;
+  background: url(image-path("home_page_text_separator.jpg")) no-repeat right center transparent;
 }

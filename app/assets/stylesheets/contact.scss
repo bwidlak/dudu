@@ -8,11 +8,11 @@
 #container input#contact_phone,
 #container textarea {
   border: 0 none;
-  background: url("/images/contact_input.png") no-repeat 0 0;
+  background: url(image-path("contact_input.png")) no-repeat 0 0;
 }
 
 #container textarea {
-  background: url("/images/contact_textarea.png") no-repeat 0 0;
+  background: url(image-path("contact_textarea.png")) no-repeat 0 0;
 }
 
 #container label {
@@ -98,11 +98,11 @@
 
 #container div.fieldWithErrors input#contact_name,
 #container div.fieldWithErrors input#contact_phone {
-  background: url("/images/contact_input_error.png") no-repeat 0 0;
+  background: url(image-path("contact_input_error.png")) no-repeat 0 0;
 }
 
 #container div.fieldWithErrors textarea#contact_body {
-  background: url("/images/contact_textarea_error.png") no-repeat 0 0;
+  background: url(image-path("contact_textarea_error.png")) no-repeat 0 0;
 }
 
 #container div.formError {

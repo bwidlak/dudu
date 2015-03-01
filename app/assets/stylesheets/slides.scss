@@ -1,6 +1,8 @@
 #frame {
   position:absolute;
-  background: url("/images/frames_photos.png") no-repeat 0 0;
+  background-repeat: no-repeat;
+  background-position: 0 0; 
+  background-image: url(image-path("frames_photos.png"));
   z-index:99999;
   width:986px;
   height:280px;

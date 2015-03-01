@@ -31,25 +31,25 @@
 }
 
 #menu ul.nav li#start a {
-  background: url(/images/main_menu.png) no-repeat 0 0;
+  background: url(image-path("main_menu.png")) no-repeat 0 0;
   width: 92px;
   height: 45px;
 }
 
 #menu ul.nav li#about a {
-  background: url(/images/main_menu.png) no-repeat -92px 0;
+  background: url(image-path("main_menu.png")) no-repeat -92px 0;
   width: 103px;
   height: 45px;
 }  
 
 #menu ul.nav li#contact a {
-  background: url(/images/main_menu.png) no-repeat -195px 0;
+  background: url(image-path("main_menu.png")) no-repeat -195px 0;
   width: 124px;
   height: 45px;
 }
 
 #menu ul.nav li#start a:hover {
-  background: url(/images/main_menu.png) no-repeat 0px -45px;
+  background: url(image-path("main_menu.png")) no-repeat 0px -45px;
 }
 
 #menu ul.nav li#start a:active {
@@ -58,7 +58,7 @@
 }
 
 #menu ul.nav li#about a:hover {
-  background: url(/images/main_menu.png) no-repeat -92px -45px;
+  background: url(image-path("main_menu.png")) no-repeat -92px -45px;
 }
 
 #menu ul.nav li#about a:active {
@@ -67,7 +67,7 @@
 }
 
 #menu ul.nav li#contact a:hover {
-  background: url(/images/main_menu.png) no-repeat -195px -45px
+  background: url(image-path("main_menu.png")) no-repeat -195px -45px
 }
 
 #menu ul.nav li#contact a:active {
@@ -76,15 +76,15 @@
 }
 
 #menu ul.nav li#start.selected a {
-  background: url(/images/main_menu.png) no-repeat 0px -45px;
+  background: url(image-path("main_menu.png")) no-repeat 0px -45px;
 }
 
 #menu ul.nav li#about.selected a {
-  background: url(/images/main_menu.png) no-repeat -92px -45px;
+  background: url(image-path("main_menu.png")) no-repeat -92px -45px;
 }  
   
 #menu ul.nav li#contact.selected a {
-  background: url(/images/main_menu.png) no-repeat -195px -45px
+  background: url(image-path("main_menu.png")) no-repeat -195px -45px
 }
 
 /* SUB MENU */
@@ -112,90 +112,90 @@
 }
 
 #menu ul li#start a {
-  background: url(/images/sub_menu2.png) no-repeat 0px 0px;
+  background: url(image-path("sub_menu2.png")) no-repeat 0px 0px;
   width: 34px;
   height: 34px;
 }
 
 #menu ul li#end a {
-  background: url(/images/sub_menu2.png) no-repeat -685px 0px;
+  background: url(image-path("sub_menu2.png")) no-repeat -685px 0px;
   width: 40px;
   height: 34px;
 }
 
 #menu ul.categories li#category_ślub a {
-  background: url(/images/sub_menu2.png) no-repeat -34px 0px;
+  background: url(image-path("sub_menu2.png")) no-repeat -34px 0px;
   width: 72px;
   height: 34px;
 }
 
 #menu ul.categories li#category_wesele a {
-  background: url(/images/sub_menu2.png) no-repeat -106px 0px;
+  background: url(image-path("sub_menu2.png")) no-repeat -106px 0px;
   width: 100px;
   height: 34px;
 }
 
 #menu ul.categories li#category_plener a {
-  background: url(/images/sub_menu2.png) no-repeat -206px 0px;
+  background: url(image-path("sub_menu2.png")) no-repeat -206px 0px;
   width: 95px;
   height: 34px;
 }
 
 #menu ul.categories li#category_chrzest a {
-  background: url(/images/sub_menu2.png) no-repeat -301px 0px;
+  background: url(image-path("sub_menu2.png")) no-repeat -301px 0px;
   width: 111px;
   height: 34px;
 }
 
 #menu ul.categories li#category_dzieci a {
-  background: url(/images/sub_menu2.png) no-repeat -412px 0px;
+  background: url(image-path("sub_menu2.png")) no-repeat -412px 0px;
   width: 87px;
   height: 34px;
 }
 
 #menu ul.categories li#category_komunia a {
-  background: url(/images/sub_menu2.png) no-repeat -499px 0px;
+  background: url(image-path("sub_menu2.png")) no-repeat -499px 0px;
   width: 116px;
   height: 34px;
 }
 
 #menu ul.categories li#category_inne a {
-  background: url(/images/sub_menu2.png) no-repeat -615px 0px;
+  background: url(image-path("sub_menu2.png")) no-repeat -615px 0px;
   width: 70px;
   height: 34px;
 }
 
 #menu ul.categories li#category_ślub a:hover,
 #menu ul.categories li#category_ślub.selected a {
-  background: url(/images/sub_menu2.png) no-repeat -34px -34px;
+  background: url(image-path("sub_menu2.png")) no-repeat -34px -34px;
 }
 
 #menu ul.categories li#category_wesele a:hover,
 #menu ul.categories li#category_wesele.selected a {
-  background: url(/images/sub_menu2.png) no-repeat -106px -34px;
+  background: url(image-path("sub_menu2.png")) no-repeat -106px -34px;
 }
 
 #menu ul.categories li#category_plener a:hover,
 #menu ul.categories li#category_plener.selected a {
-  background: url(/images/sub_menu2.png) no-repeat -206px -34px;
+  background: url(image-path("sub_menu2.png")) no-repeat -206px -34px;
 }
 
 #menu ul.categories li#category_chrzest a:hover,
 #menu ul.categories li#category_chrzest.selected a {
-  background: url(/images/sub_menu2.png) no-repeat -301px -34px;
+  background: url(image-path("sub_menu2.png")) no-repeat -301px -34px;
 }
 
 #menu ul.categories li#category_dzieci a:hover,
 #menu ul.categories li#category_dzieci.selected a {
-  background: url(/images/sub_menu2.png) no-repeat -412px -34px;
+  background: url(image-path("sub_menu2.png")) no-repeat -412px -34px;
 }
 
 #menu ul.categories li#category_komunia a:hover,
 #menu ul.categories li#category_komunia.selected a {
-  background: url(/images/sub_menu2.png) no-repeat -499px -34px;
+  background: url(image-path("sub_menu2.png")) no-repeat -499px -34px;
 }
 
 #menu ul.categories li#category_inne a:hover,
 #menu ul.categories li#category_inne.selected a {
-  background: url(/images/sub_menu2.png) no-repeat -615px -34px;
+  background: url(image-path("sub_menu2.png")) no-repeat -615px -34px;
 }

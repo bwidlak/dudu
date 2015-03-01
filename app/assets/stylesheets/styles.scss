@@ -30,11 +30,11 @@ body {
 }
 
 body.long_bg {
-  background: #eaeae7 url(/images/bannerbg2.jpg) repeat-x 0 -50px;
+  background: #eaeae7 url(image-path("bannerbg2.jpg")) repeat-x 0 -50px;
 }
 
 body.short_bg {
-  background: #eaeae7 url(/images/bannerbg3.jpg) repeat-x 0 0px;
+  background: #eaeae7 url(images-path("bannerbg3.jpg")) repeat-x 0 0px;
 }
 
 /* CLEAR FIXES */
