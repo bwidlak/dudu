@@ -12,6 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'newrelic_rpm'
 # gem 'therubyracer', platforms: :ruby
 gem 'static_model'
 gem 'haml'
