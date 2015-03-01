@@ -1,0 +1,4 @@
+---
+- id: 1
+  login: "marcin"
+  password_digest: "$2a$10$KJk4E4Ljyv8bNhB3mhj3GO/UgEeQY2lWNxEXp7cIZlc5UUdbddlWC"
