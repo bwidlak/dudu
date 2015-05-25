@@ -1,3 +1,9 @@
+@import 'mixins';
+
+$font-color-brown: rgba(65,30,15,1);
+$font-color-light-brown: rgba(210,190,170,1);
+$background-font: rgba(64,30,15,0.50);
+
 #header_strech {
   background: url(image-path("header_color.png")) repeat-x scroll 0 0 transparent;
   height:116px;
@@ -21,6 +27,42 @@
   outline: none;
 }
 
-ul li {
-  display: inline;
+ul.categories {
+  li.category {
+    font-family: 'museo300';
+    dispaly: block;
+    float: left;
+    border-left: 1px dotted $font-color-brown;
+
+    a {
+      padding: 10px 10px 5px 10px;
+      text-decoration: none;
+      font-size: 2em;
+      text-shadow: 1px 1px 1px $font-color-light-brown;
+      color: $font-color-brown;
+      margin: 0px 5px;
+
+      &:hover {
+        @include border-radius(4px 4px 0px 0px);
+        text-shadow: 1px 1px 1px $font-color-brown;
+        background-color: $background-font;
+        color: $font-color-light-brown;
+      }
+    }
+
+    &.selected a {
+      @include border-radius(4px 4px 0px 0px);
+      text-shadow: 1px 1px 1px $font-color-brown;
+      background-color: $background-font;
+      color: $font-color-light-brown;
+    }
+  }
+}
+
+h1.category {
+  padding: 20px 0px;
+  font-family: 'museo300';
+  color: $font-color-brown;
+  font-size: 4em;
+  text-shadow: 1px 1px 1px $font-color-light-brown;
 }

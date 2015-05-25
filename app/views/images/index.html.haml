@@ -1,6 +1,6 @@
 #headstrech
-  %h1
-    = image_tag header_for_gallery(@category.name), :alt => @category.name, :height => '54'
+  %h1.category
+    = @category.name    
 #teaser_text
   #container
     #gallery
