@@ -56,6 +56,9 @@ ul.categories {
       background-color: $background-font;
       color: $font-color-light-brown;
     }
+    &:first-child {
+      border-left: none;
+    }
   }
 }
 

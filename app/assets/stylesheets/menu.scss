@@ -29,10 +29,13 @@ $background-font-light: rgba(64,30,15,0.20);
 /* NEW CONFIG */
 
 #menu ul.nav li {
-  float: right;
+  float: left;
   dispaly: block;
   list-style-type: none;
   border-left: 1px dotted $font-color-brown;
+  &:first-child {
+    border-left: none;
+  }
 }
 
 #menu ul.nav li a {

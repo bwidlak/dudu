@@ -3,10 +3,10 @@
 
 #menu
   %ul.nav
-    %li#contact
-      = link_to 'kontakt', new_contact_path, class: request.url =~ /\/contacts/ ? 'selected' : ''
     %li#start
       = link_to 'start', root_path, class: request.url =~ /\/$/ ? 'selected' : ''
+    %li#contact
+      = link_to 'kontakt', new_contact_path, class: request.url =~ /\/contacts/ ? 'selected' : ''      
   .clearfix
 
   %br
