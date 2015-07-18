@@ -14,10 +14,12 @@
  *= require_self
  *= require styles
  *= require header
+ *= require teaser
  *= require content
  *= require footer
  *= require menu
  *= require gallery
+ *= require fonts
  *= require contact
  *= require pagination
  *= require slides

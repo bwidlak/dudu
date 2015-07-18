@@ -37,6 +37,11 @@
   color: #636559;
   float:left;
   width:254px;
+  h3 {
+    text-transform: uppercase;
+    font-family: 'museo300';
+    line-height: 1.5;
+  }
 }
 
 /* QUICK CONTACT */
@@ -72,6 +77,12 @@
 #footer #contact_form {
   margin: 20px 0 0 0;
   padding:0px 20px;
+  h3 {
+    color: #636559;
+    text-transform: uppercase;
+    font-family: 'museo300';
+    line-height: 1.5;
+  }
 }
 
 #footer input#contact_name,

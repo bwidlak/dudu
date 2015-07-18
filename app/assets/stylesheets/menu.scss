@@ -1,3 +1,10 @@
+@import 'mixins';
+
+$font-color-brown: rgba(65,30,15,1);
+$font-color-light-brown: rgba(210,190,170,1);
+$background-font: rgba(64,30,15,0.50);
+$background-font-light: rgba(64,30,15,0.20);
+
 /* MAIN MENU */
 
 #menu ul.nav {
@@ -12,17 +19,6 @@
   right:-39px;
 }
 
-#menu ul.nav li {
-  display:inline;
-}
-
-#menu ul.nav li a {
-  float: right;
-  outline: none;
-  text-indent: 99999999px;
-  overflow: hidden;
-}
-
 #menu ul.nav li#start a,
 #menu ul.nav li#about a,
 #menu ul.nav li#contact a {
@@ -30,61 +26,39 @@
   outline: medium none;
 }
 
-#menu ul.nav li#start a {
-  background: url(image-path("main_menu.png")) no-repeat 0 0;
-  width: 92px;
-  height: 45px;
+/* NEW CONFIG */
+
+#menu ul.nav li {
+  float: left;
+  dispaly: block;
+  list-style-type: none;
+  border-left: 1px dotted $font-color-brown;
+  &:first-child {
+    border-left: none;
+  }
 }
 
-#menu ul.nav li#about a {
-  background: url(image-path("main_menu.png")) no-repeat -92px 0;
-  width: 103px;
-  height: 45px;
-}  
-
-#menu ul.nav li#contact a {
-  background: url(image-path("main_menu.png")) no-repeat -195px 0;
-  width: 124px;
-  height: 45px;
-}
-
-#menu ul.nav li#start a:hover {
-  background: url(image-path("main_menu.png")) no-repeat 0px -45px;
-}
-
-#menu ul.nav li#start a:active {
-  position:relative;
-  top:1px;
-}
-
-#menu ul.nav li#about a:hover {
-  background: url(image-path("main_menu.png")) no-repeat -92px -45px;
-}
-
-#menu ul.nav li#about a:active {
-  position:relative;
-  top:1px;
-}
-
-#menu ul.nav li#contact a:hover {
-  background: url(image-path("main_menu.png")) no-repeat -195px -45px
-}
-
-#menu ul.nav li#contact a:active {
-  position:relative;
-  top:1px;
-}
-
-#menu ul.nav li#start.selected a {
-  background: url(image-path("main_menu.png")) no-repeat 0px -45px;
-}
-
-#menu ul.nav li#about.selected a {
-  background: url(image-path("main_menu.png")) no-repeat -92px -45px;
-}  
+#menu ul.nav li a {
+  padding: 10px 10px 5px 10px;
+  margin: 0px 5px;
+  font-size: 1.5em;
+  color: $font-color-brown;
   
-#menu ul.nav li#contact.selected a {
-  background: url(image-path("main_menu.png")) no-repeat -195px -45px
+  font-family: 'museo300';
+  outline: none;
+  overflow: hidden;
+  
+  text-shadow: 1px 1px 1px $font-color-light-brown;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover, &.selected {
+    @include border-radius(4px);
+    background-color: $background-font-light;
+    text-shadow: none;
+  }
+
 }
 
 /* SUB MENU */
@@ -96,106 +70,4 @@
 #menu ul.categories  li a {
   float: left;
   outline: none;
-}
-
-#menu ul.categories li#category_ślub a,
-#menu ul.categories li#category_wesele a,
-#menu ul.categories li#category_plener a,
-#menu ul.categories li#category_chrzest a,
-#menu ul.categories li#category_dzieci a,
-#menu ul.categories li#category_komunia a,
-#menu ul.categories li#category_inne a {
-  text-indent: 99999999px;
-  overflow: hidden;
-  display: block;
-  outline: medium none;
-}
-
-#menu ul li#start a {
-  background: url(image-path("sub_menu2.png")) no-repeat 0px 0px;
-  width: 34px;
-  height: 34px;
-}
-
-#menu ul li#end a {
-  background: url(image-path("sub_menu2.png")) no-repeat -685px 0px;
-  width: 40px;
-  height: 34px;
-}
-
-#menu ul.categories li#category_ślub a {
-  background: url(image-path("sub_menu2.png")) no-repeat -34px 0px;
-  width: 72px;
-  height: 34px;
-}
-
-#menu ul.categories li#category_wesele a {
-  background: url(image-path("sub_menu2.png")) no-repeat -106px 0px;
-  width: 100px;
-  height: 34px;
-}
-
-#menu ul.categories li#category_plener a {
-  background: url(image-path("sub_menu2.png")) no-repeat -206px 0px;
-  width: 95px;
-  height: 34px;
-}
-
-#menu ul.categories li#category_chrzest a {
-  background: url(image-path("sub_menu2.png")) no-repeat -301px 0px;
-  width: 111px;
-  height: 34px;
-}
-
-#menu ul.categories li#category_dzieci a {
-  background: url(image-path("sub_menu2.png")) no-repeat -412px 0px;
-  width: 87px;
-  height: 34px;
-}
-
-#menu ul.categories li#category_komunia a {
-  background: url(image-path("sub_menu2.png")) no-repeat -499px 0px;
-  width: 116px;
-  height: 34px;
-}
-
-#menu ul.categories li#category_inne a {
-  background: url(image-path("sub_menu2.png")) no-repeat -615px 0px;
-  width: 70px;
-  height: 34px;
-}
-
-#menu ul.categories li#category_ślub a:hover,
-#menu ul.categories li#category_ślub.selected a {
-  background: url(image-path("sub_menu2.png")) no-repeat -34px -34px;
-}
-
-#menu ul.categories li#category_wesele a:hover,
-#menu ul.categories li#category_wesele.selected a {
-  background: url(image-path("sub_menu2.png")) no-repeat -106px -34px;
-}
-
-#menu ul.categories li#category_plener a:hover,
-#menu ul.categories li#category_plener.selected a {
-  background: url(image-path("sub_menu2.png")) no-repeat -206px -34px;
-}
-
-#menu ul.categories li#category_chrzest a:hover,
-#menu ul.categories li#category_chrzest.selected a {
-  background: url(image-path("sub_menu2.png")) no-repeat -301px -34px;
-}
-
-#menu ul.categories li#category_dzieci a:hover,
-#menu ul.categories li#category_dzieci.selected a {
-  background: url(image-path("sub_menu2.png")) no-repeat -412px -34px;
-}
-
-#menu ul.categories li#category_komunia a:hover,
-#menu ul.categories li#category_komunia.selected a {
-  background: url(image-path("sub_menu2.png")) no-repeat -499px -34px;
-}
-
-#menu ul.categories li#category_inne a:hover,
-#menu ul.categories li#category_inne.selected a {
-  background: url(image-path("sub_menu2.png")) no-repeat -615px -34px;
 }
